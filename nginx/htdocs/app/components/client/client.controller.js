@@ -352,7 +352,7 @@
         resellerName = $rootScope._userData.user.reseller || $rootScope._userData.user.client.reseller.name
       }
       
-      return clientResource.resellers.get({resellerName : resellerName}, function(data){
+      return clientResource.resellers.get({resellerName: query}, function(data){
         resellers = [];
         for (ridx in data.response.resellers){
           var reseller = data.response.resellers[ridx];
